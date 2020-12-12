@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components/native';
+import React from 'react';
 
 // styles
 
@@ -27,6 +28,7 @@ const StyledButtonText = styled.Text<TTextProps>`
 // Types
 type TProps = {
   text: string;
+  onPress?: () => void;
   buttonColor?: string;
   textColor?: string;
   fontSize?: string;
@@ -41,9 +43,10 @@ export const Button: FC<TProps> = ({
   textColor = '#fff',
   fontSize = '16px',
   width = '100vw',
+  onPress,
 }) => {
   return (
-    <StyledButton width={width} buttonColor={buttonColor}>
+    <StyledButton onPress={onPress} width={width} buttonColor={buttonColor}>
       <StyledButtonText textColor={textColor} fontSize={fontSize}>
         {text}
       </StyledButtonText>
