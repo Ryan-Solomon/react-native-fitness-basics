@@ -16,6 +16,7 @@ const StyledButton = styled.TouchableOpacity<TButtonProps>`
   width: ${(props) => props.width};
   border-radius: ${(props) => props.borderRadius};
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+  margin: 1rem 0;
 `;
 
 type TTextProps = {
